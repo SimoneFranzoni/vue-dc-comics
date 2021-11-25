@@ -25,6 +25,6 @@ export default {
 <style lang="scss">
 
 @import "./assets/style/general.scss" 
-
+//da capire perchè va solo un punto e non due 
 
 </style>

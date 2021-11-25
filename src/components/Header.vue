@@ -49,15 +49,15 @@ export default {
 </script>
 
 <style scoped>
+
     header{
         width: 100%;
+        height: 103px;
         background-color: white;
-        position: fixed;
+        
     }
 
     .container{
-        width: 70%;
-        margin: 0 15%;
         display: flex;
         justify-content: space-between;
         align-content: center; 
@@ -66,14 +66,21 @@ export default {
     .container div{
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+
+    img{
+        height: 80%;
     }
 
     ul{
         list-style: none;
+        /*height 100% elimina il centramento verticale della lista*/
     }
 
     li{
         float: left;
+        height: 100%;
     }
 
     li a {
@@ -82,11 +89,13 @@ export default {
         text-align: center;
         padding: 16px;
         text-decoration: none;
+        height: 100%;
+        /*teto maiuscolo*/
     }
 
     li a:hover {
-        color: blue;
-        border-bottom: 1px solid blue;
+        color: #007ef9;
+        border-bottom: 1px solid #007ef9;
         /*il bordo spinge il blocco più in alto*/    
     }
 
