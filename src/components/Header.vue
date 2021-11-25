@@ -13,7 +13,7 @@
                         <a href="">Comics</a>
                     </li>
                     <li>
-                        <a href="">MOvies</a>
+                        <a href="">Movies</a>
                     </li>
                     <li>
                         <a href="">Tv</a>
@@ -54,7 +54,6 @@ export default {
         width: 100%;
         height: 103px;
         background-color: white;
-        
     }
 
     .container{
