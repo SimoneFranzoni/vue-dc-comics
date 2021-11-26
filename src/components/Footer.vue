@@ -118,7 +118,7 @@ export default {
 /*footer top*/
     .footer-top{
         background-image: url("../assets/img/footer-bg.jpg");
-        background-size: cov;
+        background-size: cover;
     }
 
     .footer-top .container{
