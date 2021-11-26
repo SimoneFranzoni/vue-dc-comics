@@ -6,12 +6,8 @@
             </div>
             <div>
                <ul>
-                    <li v-for="(section, index) in navList" :key="index">
-                        <a 
-                        :class="{active : (index === activeSection)}" 
-                        href="#"
-                        @click="activeSection = index"
-                        >{{ section }}</a>
+                    <li v-for="item in navList" :key="item">
+                        <a>{{item}}</a>
                     </li>
                 </ul>
             </div>
@@ -25,7 +21,6 @@ export default {
     data() {
         return{
             navList: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'],
-            activeSection: 1
         }
     }
 
@@ -61,7 +56,7 @@ export default {
 
     header ul{
         list-style: none;
-        height: 100%; /*elimina il centramento verticale della lista*/
+        /*height: 100%; /*elimina il centramento verticale della lista*/
 
         li{
             float: left;

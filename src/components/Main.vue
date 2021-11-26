@@ -1,11 +1,24 @@
 <template>
     <main>
+        <section class="jumbotrone"></section>
+
+        <div class="container">
+            <h2>Current Series</h2>
+        </div>
 
         <div class="container-sup">
-            <div class="container">
-                <h1>Content goes here</h1>
-            </div>
+            <div class="container comicsBox">
+                <TemplateComic
+                v-for="(comic, index) in Comics"
+                :key="index"
+                :comic="comic"
+                />
+            </div>    
         </div>
+
+        <button>
+            <a href="">Load More</a>
+        </button>
 
         <div class="container-inf">
             <div class="container">
@@ -31,47 +44,69 @@
                 </div>  
             </div>
         </div>
-
     </main>
 </template>
 
 <script>
+
+import Comics from '../assets/data/Books';
+import TemplateComic from './TemplateComic.vue'
+
 export default {
-    name: 'Main'
+
+    name: 'Main',
+    components: {
+        TemplateComic
+    },
+    data() {
+        return {
+            Comics
+        }
+    }
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+
+    .jumbotrone{
+        background-image: url("../assets/img/jumbotron.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 350px;     
+    }
+
+    main{
+        h2{
+            padding: 15px 50px;
+            display: inline-block;
+            color: #fff;
+            text-transform: uppercase;
+            transform: translateY(-50%);
+            background-color: #007ef9;
+        }
+
+        button{
+            padding: 8px 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            background-color: #007ef9;
+        }
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+    }
+
+    .comicsBox{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     @import "../assets/style/main-inf.scss";
     
     @import "../assets/style/main-sup.scss";
     
-    .container-inf{
-    background-color: #0282f9;
-    padding: 50px 5%;
-    color: white;
-    }
-
-    .container-inf .container{
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .container-inf .box{
-        display: flex;
-        align-items: center;    
-    }
-
-    .container-inf .box img{
-        height: 50px;
-        width: 40px;
-    }
-
-    .container-inf .box p{
-        padding-left: 10px;
-        text-transform: uppercase;
-        font-size: 14px;
-    }
-
 </style>
